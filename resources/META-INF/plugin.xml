@@ -1,0 +1,33 @@
+<idea-plugin>
+  <id>com.example.plugin.logpredict</id>
+  <name>LogPredictPlugin</name>
+  <version>1.0</version>
+  <vendor email="kyabia@foxmail.com" url="http://www.nju.edu.cn">NJU</vendor>
+
+
+  <change-notes>
+    Initial release of the plugin.
+  </change-notes>
+
+  <!-- please see https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <toolWindow id="Log predict window" anchor="right" factoryClass="tool_window.MyToolWindowFactory" secondary="true"/>
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+
+    <action id="LogPredictPlugin.ChooseDirectory" class="action.AnalyseCurrentOpenFile" text="Analyse Current Open File"
+            description="Analyse current open file">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+    </action>
+  </actions>
+
+</idea-plugin>
